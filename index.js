@@ -1,4 +1,5 @@
 import express from 'express';
+import fs from 'fs';
 
 const app = express();
 
@@ -13,6 +14,11 @@ app.get('/', (req,res) => {
 app.get('/get-data', (req,res) => {
     res.status(200).json({message: "data", data:{name:"Bavithra seenivasan"}})
 }) 
+
+app.get('/write-read', (req,res) => {
+    let today = fo
+    res.status(200).json()
+})
 
 //running 
 app.listen(PORT, () => {
