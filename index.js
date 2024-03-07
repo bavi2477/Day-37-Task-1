@@ -6,6 +6,10 @@ const app = express();
 
 const PORT = 4000;
 
+app.get('/', (req, res) => {
+    res.status(200).json({message: "Welcome to view the current timestamp./n Add /write to view the success message. /n Add /read to read the current time "})
+})
+
 
 app.get('/write', (req,res) => {
     let today = format(new Date(), 'dd-mm-yyyy-HH-mm-ss')
