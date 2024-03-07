@@ -7,7 +7,7 @@ const app = express();
 const PORT = 4000;
 
 app.get('/', (req, res) => {
-    res.status(200).json({message: "Welcome to view the current timestamp./n Add /write to view the success message. /n Add /read to read the current time "})
+    res.status(200).json({message: "Welcome to view the current timestamp. <br> Add /write to view the success message. <br> Add /read to read the current time."})
 })
 
 
@@ -26,7 +26,7 @@ app.get('/read', (req, res) => {
     const filePath = `TimeStamp/${latestFile}`;
 
     let data = fs.readFileSync(filePath, 'utf8');
-    res.status(200).send(data);
+    res.status(200).send(`<div style="text-align: center;">The current timestamp is : ${data}</div>`);
 })
 
 //running 
