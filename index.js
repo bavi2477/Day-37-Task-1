@@ -8,11 +8,7 @@ const PORT = 4000;
 
 app.get('/', (req, res) => {
     res.status(200).json({
-        message: `<div style="text-align: center; padding-top:50px;">
-    <p>Welcome to view the current timestamp.</p>
-    <p>Add /write to view the success message.</p>
-    <p>Add /read to read the current time.</p>
-    </div>`})
+        message: "Welcome to view the timestamp. Add /write to create the timestamp. Add /read to view the timestamp."})
 })
 
 
